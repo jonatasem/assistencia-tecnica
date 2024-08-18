@@ -12,7 +12,7 @@ const links = ['Home', 'Projects', 'Contact']; // Links para o cabeçalho
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename="/assistencia-tecnica">
         <Routes>
             <Route path="/" element={<App title="Meu Projeto" links={links} />}>
                 <Route index element={<Home projects={projectData} />} /> {/* Rota para Home com projectData */}

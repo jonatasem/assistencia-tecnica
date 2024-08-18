@@ -7,14 +7,8 @@ const ProjectsContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-
-    h1 {
-        width: 100%;
-        text-align: start;
-        padding: 1.5rem;
-        font-size: 25px;
-        color: var(--azul-segundo);
-    }
+    background-color: #f9f9f9;
+    border-radius: 10px;
 `;
 
 const ProjectItemContainer = styled.div`
@@ -25,10 +19,11 @@ const ProjectItemContainer = styled.div`
     width: 300px;
     text-align: center;
     box-shadow: 1px 1px 5px silver;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 
     &:hover {
         transform: scale(1.05);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     }
 `;
 
@@ -42,6 +37,7 @@ const ProjectImage = styled.img`
 const ProjectTitle = styled.h2`
     font-size: 1.5em;
     margin: 10px 0;
+    color: #007bff;
 `;
 
 const ProjectDescription = styled.p`
@@ -52,14 +48,14 @@ const ProjectLink = styled.a`
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: var(--azul-quarto);
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: var(--azul-terceiro);
+        background-color: #0056b3;
     }
 `;
 
@@ -75,7 +71,7 @@ const SearchHead = styled.div`
         outline: 0;
         border: 1px solid silver;
         border-radius: 0.5rem;
-        color: var(--azul-primeiro);
+        color: #007bff;
     }
 `;
 
@@ -112,7 +108,7 @@ const Projects = ({ projects }) => {
                 />
             </SearchHead>
             <ProjectsContainer>
-                <h1>Projetos</h1>
+                <h1 style={{ width: '100%', textAlign: 'center', color: '#007bff' }}>Projetos</h1>
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map(project => (
                         <ProjectItem key={project.id} project={project} />

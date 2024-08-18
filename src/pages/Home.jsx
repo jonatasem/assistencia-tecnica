@@ -6,12 +6,16 @@ const Container = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 `;
 
 const Header = styled.header`
     text-align: center;
     padding: 2rem 0;
-    background-color: #f8f9fa;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
 `;
 
 const Section = styled.section`
@@ -32,18 +36,21 @@ const ServiceCard = styled.div`
     width: 300px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
 
     &:hover {
         transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 `;
 
 const TestimonialContainer = styled.div`
-    background-color: #f1f1f1;
+    background-color: #e7f3fe;
     padding: 20px;
     border-radius: 8px;
     margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Home = () => {
@@ -61,7 +68,7 @@ const Home = () => {
                 <ServicesContainer>
                     {services.map(service => (
                         <ServiceCard key={service.id}>
-                            <h3>{service.title}</h3>
+                            <h3 style={{ color: '#007bff' }}>{service.title}</h3>
                             <p>{service.description}</p>
                         </ServiceCard>
                     ))}

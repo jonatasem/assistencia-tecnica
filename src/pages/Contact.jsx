@@ -8,17 +8,11 @@ const ContactContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 0 auto 5rem;
-
-    a {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
 `;
 
 const StyledForm = styled(Form)`
@@ -30,19 +24,28 @@ const StyledForm = styled(Form)`
 const Input = styled(Field)`
     margin: 0.5rem 0;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid #007bff;
     border-radius: 4px;
     font-size: 1rem;
     outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+        border-color: #0056b3;
+    }
 `;
 
 const TextArea = styled(Field)`
     margin: 0.5rem 0;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid #007bff;
     border-radius: 4px;
     font-size: 1rem;
     resize: none;
+
+    &:focus {
+        border-color: #0056b3;
+    }
 `;
 
 const Button = styled.button`
@@ -85,7 +88,6 @@ const ContainerContact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 `;
 
 const validationSchema = Yup.object().shape({
@@ -106,7 +108,7 @@ const Contact = () => {
 
     return (
         <ContainerContact>
-            <h1>Entre em Contato!</h1>
+            <h1 style={{ color: '#007bff' }}>Entre em Contato!</h1>
             <p>Preencha o formulário abaixo:</p>
             <ContactContainer>
                 <Formik
@@ -145,7 +147,6 @@ const Contact = () => {
                     )}
                 </Formik>
                 {showSuccessMessage && <SuccessMessage>Mensagem enviada com sucesso!</SuccessMessage>}
-                <a href="/">Voltar</a>
             </ContactContainer>
         </ContainerContact>
     );
