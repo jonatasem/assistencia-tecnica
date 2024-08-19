@@ -5,6 +5,10 @@ const FooterContainer = styled.footer`
     background-color: var(--azul-principal);
     padding: 10px;
     text-align: center;
+    
+    p {
+        color: var(--azul-primeiro);
+    }
 `;
 
 const Footer = () => {

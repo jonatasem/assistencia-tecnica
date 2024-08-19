@@ -9,7 +9,7 @@ const projectData = [
         id: 1, 
         nome: 'Driver Booter 10.0', 
         img: driverbooster, 
-        descricao: 'Descrição do projeto A', 
+        descricao: 'Atualiza Mais de 6.500.000+ de Drivers com 1 Clique para Garantir o Funcionamento Perfeito do PC.', 
         link: 'link-para-o-projeto-a' 
     },
     { 

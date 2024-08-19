@@ -9,6 +9,12 @@ const ProjectsContainer = styled.div`
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
+
+    h1 {
+        width: 100%;
+        background-color: transparent;
+    }
+
 `;
 
 const ProjectItemContainer = styled.div`
@@ -62,7 +68,7 @@ const ProjectLink = styled.a`
 const SearchHead = styled.div`
     width: 90%;
     text-align: end;
-    margin: 0 auto;
+    margin: 1.5rem auto 0.5rem;
     padding: 0.5rem;
 
     input {
@@ -108,7 +114,7 @@ const Projects = ({ projects }) => {
                 />
             </SearchHead>
             <ProjectsContainer>
-                <h1 style={{ width: '100%', textAlign: 'center', color: '#007bff' }}>Projetos</h1>
+                <h1>Projetos</h1>
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map(project => (
                         <ProjectItem key={project.id} project={project} />

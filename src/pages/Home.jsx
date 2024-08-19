@@ -8,18 +8,31 @@ const Container = styled.div`
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
+
+    h2 {
+        color: var(--azul-primeiro);
+    }
 `;
 
 const Header = styled.header`
     text-align: center;
     padding: 2rem 0;
-    background-color: #007bff;
-    color: white;
+    background-image: linear-gradient(to right, var(--azul-primeiro), var(--azul-quarto));
     border-radius: 10px;
+
+    h1, p {
+        color: var(--branco);
+    }
 `;
 
 const Section = styled.section`
     margin: 2rem 0;
+    background-color: white;
+    padding: 0.5rem;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
 `;
 
 const ServicesContainer = styled.div`
@@ -37,20 +50,29 @@ const ServiceCard = styled.div`
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #ffffff;
+    background-color: var(--branco);
 
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
+
+    h3 {
+        color: var(--azul-segundo);
+    }
 `;
 
 const TestimonialContainer = styled.div`
     background-color: #e7f3fe;
-    padding: 20px;
     border-radius: 8px;
     margin: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+
+    h5, p {
+        padding: 0.5rem;
+    }
+        
 `;
 
 const Home = () => {
@@ -68,7 +90,7 @@ const Home = () => {
                 <ServicesContainer>
                     {services.map(service => (
                         <ServiceCard key={service.id}>
-                            <h3 style={{ color: '#007bff' }}>{service.title}</h3>
+                            <h3>{service.title}</h3>
                             <p>{service.description}</p>
                         </ServiceCard>
                     ))}
@@ -79,7 +101,7 @@ const Home = () => {
                 <h2>Depoimentos</h2>
                 {testimonials.map(testimonial => (
                     <TestimonialContainer key={testimonial.id}>
-                        <p><strong>{testimonial.name}</strong></p>
+                        <h5><strong>{testimonial.name}</strong></h5>
                         <p>{testimonial.feedback}</p>
                     </TestimonialContainer>
                 ))}

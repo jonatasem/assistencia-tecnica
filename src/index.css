@@ -11,10 +11,14 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: var(--branco);
+  color: var(--azul-quarto);
 }
 
-a {
+body {
+  background-color: white;
+}
+
+a, Link {
   text-decoration: none;
   color: var(--azul-primeiro);
 }
