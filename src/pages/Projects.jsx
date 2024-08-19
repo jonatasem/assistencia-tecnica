@@ -48,6 +48,7 @@ const ProjectTitle = styled.h2`
 
 const ProjectDescription = styled.p`
     color: #666;
+    text-align: justify;
 `;
 
 const ProjectLink = styled.a`
